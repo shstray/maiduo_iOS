@@ -10,9 +10,16 @@
 #import "InviteTableViewController.h"
 #import "AsyncImageView/AsyncImageView.h"
 #import "MDMessage.h"
-
+#import "ChitChatViewController.h"
+enum{
+    SEGMENTED_BUTTON_MESSAGE,
+    SEGMENTED_BUTTON_CHAT,
+    SEGMENTED_BUTTON_ADDRESSLIST
+}SEGMENTED_BUTTON_TAG;
 @interface ActivityTableViewController ()
-
+{
+    ChitChatViewController * _ChitChatViewControl;
+}
 @end
 
 @implementation ActivityTableViewController
@@ -97,6 +104,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    _ChitChatViewControl = nil;
     
     self.navigationController.toolbarHidden = YES;
 }
@@ -166,9 +174,26 @@
 //    NSLog(@"MESSAGE %d", MESSAGE);
 //    NSLog(@"CONTACT %d", CONTACT);
     self.viewState = segmented.selectedSegmentIndex;
+    [self SegmentedClickButton];
     self.navigationItem.rightBarButtonItem = [self createButton];
 }
-
+-(void)SegmentedClickButton
+{
+    if (segmented.selectedSegmentIndex<0||segmented.selectedSegmentIndex>2)
+        return;
+    switch (segmented.selectedSegmentIndex) {
+        case SEGMENTED_BUTTON_CHAT:
+        {
+            if (!_ChitChatViewControl)
+                _ChitChatViewControl = [[ChitChatViewController alloc] init];
+            [self.navigationController pushViewController:_ChitChatViewControl animated:YES];
+                
+        }
+            break;
+        default:
+            break;
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
