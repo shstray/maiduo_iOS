@@ -7,31 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77007AAA173A354C008A9260 /* BubbleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A88173A354C008A9260 /* BubbleMessageCell.m */; };
-		77007AAB173A354C008A9260 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A8A173A354C008A9260 /* BubbleView.m */; };
-		77007AAC173A354C008A9260 /* MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A8C173A354C008A9260 /* MessageInputView.m */; };
-		77007AAD173A354C008A9260 /* MessageSoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A8E173A354C008A9260 /* MessageSoundEffect.m */; };
-		77007AAE173A354C008A9260 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A90173A354C008A9260 /* MessagesViewController.m */; };
-		77007AAF173A354C008A9260 /* NSString+MessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007A92173A354C008A9260 /* NSString+MessagesView.m */; };
-		77007AB0173A354C008A9260 /* input-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A95173A354C008A9260 /* input-bar.png */; };
-		77007AB1173A354C008A9260 /* input-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A96173A354C008A9260 /* input-bar@2x.png */; };
-		77007AB2173A354C008A9260 /* input-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A97173A354C008A9260 /* input-field.png */; };
-		77007AB3173A354C008A9260 /* input-field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A98173A354C008A9260 /* input-field@2x.png */; };
-		77007AB4173A354C008A9260 /* messageBubbleBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A99173A354C008A9260 /* messageBubbleBlue.png */; };
-		77007AB5173A354C008A9260 /* messageBubbleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9A173A354C008A9260 /* messageBubbleBlue@2x.png */; };
-		77007AB6173A354C008A9260 /* messageBubbleGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9B173A354C008A9260 /* messageBubbleGray.png */; };
-		77007AB7173A354C008A9260 /* messageBubbleGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9C173A354C008A9260 /* messageBubbleGray@2x.png */; };
-		77007AB8173A354C008A9260 /* messageBubbleHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9D173A354C008A9260 /* messageBubbleHighlighted.png */; };
-		77007AB9173A354C008A9260 /* messageBubbleHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9E173A354C008A9260 /* messageBubbleHighlighted@2x.png */; };
-		77007ABA173A354C008A9260 /* messageBubbleTyping.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007A9F173A354C008A9260 /* messageBubbleTyping.png */; };
-		77007ABB173A354C008A9260 /* messageBubbleTyping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA0173A354C008A9260 /* messageBubbleTyping@2x.png */; };
-		77007ABC173A354C008A9260 /* send-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA1173A354C008A9260 /* send-highlighted.png */; };
-		77007ABD173A354C008A9260 /* send-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA2173A354C008A9260 /* send-highlighted@2x.png */; };
-		77007ABE173A354C008A9260 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA3173A354C008A9260 /* send.png */; };
-		77007ABF173A354C008A9260 /* send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA4173A354C008A9260 /* send@2x.png */; };
-		77007AC0173A354C008A9260 /* messageReceived.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA6173A354C008A9260 /* messageReceived.aiff */; };
-		77007AC1173A354C008A9260 /* messageSent.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 77007AA7173A354C008A9260 /* messageSent.aiff */; };
-		77007AC2173A354C008A9260 /* UIView+AnimationOptionsForCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007AA9173A354C008A9260 /* UIView+AnimationOptionsForCurve.m */; };
 		77007AC4173A3735008A9260 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77007AC3173A3735008A9260 /* AudioToolbox.framework */; };
 		77007AC8173A3B3D008A9260 /* ChitChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77007AC6173A3B3D008A9260 /* ChitChatViewController.m */; };
 		77007AC9173A3B3D008A9260 /* ChitChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77007AC7173A3B3D008A9260 /* ChitChatViewController.xib */; };
@@ -82,38 +57,6 @@
 
 /* Begin PBXFileReference section */
 		19CCBF954E574D39AED92D14 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		77007A87173A354C008A9260 /* BubbleMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleMessageCell.h; sourceTree = "<group>"; };
-		77007A88173A354C008A9260 /* BubbleMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleMessageCell.m; sourceTree = "<group>"; };
-		77007A89173A354C008A9260 /* BubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
-		77007A8A173A354C008A9260 /* BubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
-		77007A8B173A354C008A9260 /* MessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInputView.h; sourceTree = "<group>"; };
-		77007A8C173A354C008A9260 /* MessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageInputView.m; sourceTree = "<group>"; };
-		77007A8D173A354C008A9260 /* MessageSoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSoundEffect.h; sourceTree = "<group>"; };
-		77007A8E173A354C008A9260 /* MessageSoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSoundEffect.m; sourceTree = "<group>"; };
-		77007A8F173A354C008A9260 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
-		77007A90173A354C008A9260 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
-		77007A91173A354C008A9260 /* NSString+MessagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MessagesView.h"; sourceTree = "<group>"; };
-		77007A92173A354C008A9260 /* NSString+MessagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MessagesView.m"; sourceTree = "<group>"; };
-		77007A95173A354C008A9260 /* input-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar.png"; sourceTree = "<group>"; };
-		77007A96173A354C008A9260 /* input-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar@2x.png"; sourceTree = "<group>"; };
-		77007A97173A354C008A9260 /* input-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field.png"; sourceTree = "<group>"; };
-		77007A98173A354C008A9260 /* input-field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field@2x.png"; sourceTree = "<group>"; };
-		77007A99173A354C008A9260 /* messageBubbleBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleBlue.png; sourceTree = "<group>"; };
-		77007A9A173A354C008A9260 /* messageBubbleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleBlue@2x.png"; sourceTree = "<group>"; };
-		77007A9B173A354C008A9260 /* messageBubbleGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleGray.png; sourceTree = "<group>"; };
-		77007A9C173A354C008A9260 /* messageBubbleGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleGray@2x.png"; sourceTree = "<group>"; };
-		77007A9D173A354C008A9260 /* messageBubbleHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleHighlighted.png; sourceTree = "<group>"; };
-		77007A9E173A354C008A9260 /* messageBubbleHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleHighlighted@2x.png"; sourceTree = "<group>"; };
-		77007A9F173A354C008A9260 /* messageBubbleTyping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleTyping.png; sourceTree = "<group>"; };
-		77007AA0173A354C008A9260 /* messageBubbleTyping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleTyping@2x.png"; sourceTree = "<group>"; };
-		77007AA1173A354C008A9260 /* send-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-highlighted.png"; sourceTree = "<group>"; };
-		77007AA2173A354C008A9260 /* send-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-highlighted@2x.png"; sourceTree = "<group>"; };
-		77007AA3173A354C008A9260 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
-		77007AA4173A354C008A9260 /* send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send@2x.png"; sourceTree = "<group>"; };
-		77007AA6173A354C008A9260 /* messageReceived.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = messageReceived.aiff; sourceTree = "<group>"; };
-		77007AA7173A354C008A9260 /* messageSent.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = messageSent.aiff; sourceTree = "<group>"; };
-		77007AA8173A354C008A9260 /* UIView+AnimationOptionsForCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationOptionsForCurve.h"; sourceTree = "<group>"; };
-		77007AA9173A354C008A9260 /* UIView+AnimationOptionsForCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationOptionsForCurve.m"; sourceTree = "<group>"; };
 		77007AC3173A3735008A9260 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		77007AC5173A3B3D008A9260 /* ChitChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChitChatViewController.h; sourceTree = "<group>"; };
 		77007AC6173A3B3D008A9260 /* ChitChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChitChatViewController.m; sourceTree = "<group>"; };
@@ -205,75 +148,11 @@
 		77007A85173A354C008A9260 /* chitchat */ = {
 			isa = PBXGroup;
 			children = (
-				77007A86173A354C008A9260 /* MessagesTableViewController */,
 				77007AC5173A3B3D008A9260 /* ChitChatViewController.h */,
 				77007AC6173A3B3D008A9260 /* ChitChatViewController.m */,
 				77007AC7173A3B3D008A9260 /* ChitChatViewController.xib */,
 			);
 			path = chitchat;
-			sourceTree = "<group>";
-		};
-		77007A86173A354C008A9260 /* MessagesTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				77007A87173A354C008A9260 /* BubbleMessageCell.h */,
-				77007A88173A354C008A9260 /* BubbleMessageCell.m */,
-				77007A89173A354C008A9260 /* BubbleView.h */,
-				77007A8A173A354C008A9260 /* BubbleView.m */,
-				77007A8B173A354C008A9260 /* MessageInputView.h */,
-				77007A8C173A354C008A9260 /* MessageInputView.m */,
-				77007A8D173A354C008A9260 /* MessageSoundEffect.h */,
-				77007A8E173A354C008A9260 /* MessageSoundEffect.m */,
-				77007A8F173A354C008A9260 /* MessagesViewController.h */,
-				77007A90173A354C008A9260 /* MessagesViewController.m */,
-				77007A91173A354C008A9260 /* NSString+MessagesView.h */,
-				77007A92173A354C008A9260 /* NSString+MessagesView.m */,
-				77007A93173A354C008A9260 /* Resources */,
-				77007AA8173A354C008A9260 /* UIView+AnimationOptionsForCurve.h */,
-				77007AA9173A354C008A9260 /* UIView+AnimationOptionsForCurve.m */,
-			);
-			path = MessagesTableViewController;
-			sourceTree = "<group>";
-		};
-		77007A93173A354C008A9260 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				77007A94173A354C008A9260 /* Images */,
-				77007AA5173A354C008A9260 /* Sounds */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		77007A94173A354C008A9260 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				77007A95173A354C008A9260 /* input-bar.png */,
-				77007A96173A354C008A9260 /* input-bar@2x.png */,
-				77007A97173A354C008A9260 /* input-field.png */,
-				77007A98173A354C008A9260 /* input-field@2x.png */,
-				77007A99173A354C008A9260 /* messageBubbleBlue.png */,
-				77007A9A173A354C008A9260 /* messageBubbleBlue@2x.png */,
-				77007A9B173A354C008A9260 /* messageBubbleGray.png */,
-				77007A9C173A354C008A9260 /* messageBubbleGray@2x.png */,
-				77007A9D173A354C008A9260 /* messageBubbleHighlighted.png */,
-				77007A9E173A354C008A9260 /* messageBubbleHighlighted@2x.png */,
-				77007A9F173A354C008A9260 /* messageBubbleTyping.png */,
-				77007AA0173A354C008A9260 /* messageBubbleTyping@2x.png */,
-				77007AA1173A354C008A9260 /* send-highlighted.png */,
-				77007AA2173A354C008A9260 /* send-highlighted@2x.png */,
-				77007AA3173A354C008A9260 /* send.png */,
-				77007AA4173A354C008A9260 /* send@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		77007AA5173A354C008A9260 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				77007AA6173A354C008A9260 /* messageReceived.aiff */,
-				77007AA7173A354C008A9260 /* messageSent.aiff */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		9015396D172BDC1600DBB64B /* Yaab */ = {
@@ -489,24 +368,6 @@
 				90F342CD17217C8E005BC944 /* Default.png in Resources */,
 				90F342CF17217C8E005BC944 /* Default@2x.png in Resources */,
 				90F342D117217C8E005BC944 /* Default-568h@2x.png in Resources */,
-				77007AB0173A354C008A9260 /* input-bar.png in Resources */,
-				77007AB1173A354C008A9260 /* input-bar@2x.png in Resources */,
-				77007AB2173A354C008A9260 /* input-field.png in Resources */,
-				77007AB3173A354C008A9260 /* input-field@2x.png in Resources */,
-				77007AB4173A354C008A9260 /* messageBubbleBlue.png in Resources */,
-				77007AB5173A354C008A9260 /* messageBubbleBlue@2x.png in Resources */,
-				77007AB6173A354C008A9260 /* messageBubbleGray.png in Resources */,
-				77007AB7173A354C008A9260 /* messageBubbleGray@2x.png in Resources */,
-				77007AB8173A354C008A9260 /* messageBubbleHighlighted.png in Resources */,
-				77007AB9173A354C008A9260 /* messageBubbleHighlighted@2x.png in Resources */,
-				77007ABA173A354C008A9260 /* messageBubbleTyping.png in Resources */,
-				77007ABB173A354C008A9260 /* messageBubbleTyping@2x.png in Resources */,
-				77007ABC173A354C008A9260 /* send-highlighted.png in Resources */,
-				77007ABD173A354C008A9260 /* send-highlighted@2x.png in Resources */,
-				77007ABE173A354C008A9260 /* send.png in Resources */,
-				77007ABF173A354C008A9260 /* send@2x.png in Resources */,
-				77007AC0173A354C008A9260 /* messageReceived.aiff in Resources */,
-				77007AC1173A354C008A9260 /* messageSent.aiff in Resources */,
 				77007AC9173A3B3D008A9260 /* ChitChatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,13 +449,6 @@
 				905876E4172D45AD00690DC3 /* YMessageContactViewController.m in Sources */,
 				906B96E21736A16100A7C20E /* YMessage.m in Sources */,
 				906B96E51736A6D400A7C20E /* YPlainContact.m in Sources */,
-				77007AAA173A354C008A9260 /* BubbleMessageCell.m in Sources */,
-				77007AAB173A354C008A9260 /* BubbleView.m in Sources */,
-				77007AAC173A354C008A9260 /* MessageInputView.m in Sources */,
-				77007AAD173A354C008A9260 /* MessageSoundEffect.m in Sources */,
-				77007AAE173A354C008A9260 /* MessagesViewController.m in Sources */,
-				77007AAF173A354C008A9260 /* NSString+MessagesView.m in Sources */,
-				77007AC2173A354C008A9260 /* UIView+AnimationOptionsForCurve.m in Sources */,
 				77007AC8173A3B3D008A9260 /* ChitChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
