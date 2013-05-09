@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ChitChatViewController : UIViewController
-
+#import "JSMessagesViewController.h"
+@interface ChitChatViewController : JSMessagesViewController
+@property (strong, nonatomic) NSMutableArray *messages;
+@property (strong, nonatomic) NSMutableArray *timestamps;
 @end
