@@ -7,8 +7,10 @@
 //
 
 #import "ChitChatViewController.h"
-
 @interface ChitChatViewController ()
+{
+}
+@property (strong, nonatomic) IBOutlet UIView *MessageShowView;
 
 @end
 
@@ -102,7 +104,12 @@
     }
     return self;
 }
-
+-(id)init {
+    if (self = [super initWithNibName:@"ChitChatShowViewController" bundle:nil]) {
+        
+    }
+    return self;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

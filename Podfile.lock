@@ -1,19 +1,24 @@
 PODS:
   - AFNetworking (1.2.1)
+  - JSMessagesViewController (1.1.0)
   - RHAddressBook (1.0.2)
   - TITokenField (1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - JSMessagesViewController (from `https://github.com/maiduo/MessagesTableViewController.git`)
   - RHAddressBook
   - TITokenField (from `https://github.com/imcj/TITokenField.git`)
 
 EXTERNAL SOURCES:
+  JSMessagesViewController:
+    :git: https://github.com/maiduo/MessagesTableViewController.git
   TITokenField:
     :git: https://github.com/imcj/TITokenField.git
 
 SPEC CHECKSUMS:
   AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
+  JSMessagesViewController: 0e2c2787ea17a81be9c6a2be2669ca4819e0cba9
   RHAddressBook: 64f78a4058e0a7849275c970bf19fe195edf94d0
   TITokenField: 4174761389eff89f3c722316b9bcdd1dfbbfed2f
 
