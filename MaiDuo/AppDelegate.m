@@ -52,21 +52,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
         return;
     
     NSString *registerTokenURL;
-<<<<<<< HEAD
     registerTokenURL = @"https://himaiduo.com/aps/device/";
-=======
-    registerTokenURL = @"https://himaiduo.com/aps//device/";
->>>>>>> 982d786d726d053dcf2ce5a665cd4d361c8b4e60
     
     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
                           token, @"token", @"1", @"service", nil];
     
     AFHTTPClient *client = [[AFHTTPClient alloc]
-<<<<<<< HEAD
                                     initWithBaseURL:[NSURL URLWithString:@"http://himaiduo.com/aps/"]];
-=======
-                                    initWithBaseURL:[NSURL URLWithString:@"https://himaiduo.com/aps/"]];
->>>>>>> 982d786d726d053dcf2ce5a665cd4d361c8b4e60
     NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:@"device/" parameters:data];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"%@", [JSON objectForKey:@"token"]);
