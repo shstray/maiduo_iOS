@@ -6,11 +6,15 @@
 //  Copyright (c) 2013年 魏琮举. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "LatestViewController.h"
-#import "MDHTTPAPI.h"
 #import "YaabUser.h"
 #import "iToast.h"
+#import "MDHTTPAPI.h"
+#import "MDLoginViewController.h"
+#import "MDRegisterViewController.h"
+#import "MDLatestViewController.h"
+#import "MDUserManager.h"
+#import "MBProgressHUD.h"
+#import "MDAppDelegate.h"
 
 #define kLeftMargin				20.0
 #define kRightMargin			20.0
@@ -18,7 +22,8 @@
 #define kTextFieldHeight		25
 #define kOffSet         		160
 #define kViewTag				100
-@interface LoginViewController ()
+@interface MDLoginViewController (){
+}
 @property (nonatomic, retain) NSArray *dataArray;
 @property (nonatomic, retain) UITextField *txtUser;
 @property (nonatomic, retain) UITextField *txtPass;
@@ -26,7 +31,7 @@
 
 static NSString *kSourceKey = @"sourceKey";
 static NSString *kViewKey = @"viewKey";
-@implementation LoginViewController
+@implementation MDLoginViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,23 +46,30 @@ static NSString *kViewKey = @"viewKey";
 {
     [super viewDidLoad];
     self.navigationItem.title=@"用户登录";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     
     
-    
-    UIBarButtonItem *bbiRight=[[UIBarButtonItem alloc] initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
+    UIBarButtonItem *bbiRight=[[UIBarButtonItem alloc]
+                               initWithTitle:@"登录"
+                               style:UIBarButtonItemStyleDone
+                               target:self action:@selector(login)];
+
     self.navigationItem.rightBarButtonItem = bbiRight;
+
+    UIBarButtonItem *buttonItemRegister;
+    buttonItemRegister = [[UIBarButtonItem alloc]
+                          initWithTitle:@"注册"
+                          style:UIBarButtonItemStyleBordered
+                          target:self
+                          action:@selector(register)];
+    self.navigationItem.leftBarButtonItem = buttonItemRegister;
     
     self.dataArray = [NSArray arrayWithObjects:
 					  [NSDictionary dictionaryWithObjectsAndKeys:
-					   @"用  户  名：",kSourceKey,
+					   @"手机号",kSourceKey,
 					   self.txtUser,kViewKey,
 					   nil],
 					  [NSDictionary dictionaryWithObjectsAndKeys:
-					   @"用户密码：",kSourceKey,
+					   @"密码",kSourceKey,
 					   self.txtPass,kViewKey,
 					   nil],
 					  nil];
@@ -73,13 +85,11 @@ static NSString *kViewKey = @"viewKey";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return 2;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -115,57 +125,6 @@ static NSString *kViewKey = @"viewKey";
 	return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 #pragma mark -
 #pragma mark TextFields
 
@@ -220,16 +179,34 @@ static NSString *kViewKey = @"viewKey";
 #pragma mark Customer methods
 -(void) login
 {
-    MDUser *user=[YaabUser sharedInstance].user;
+    MDUser *user=[MDUserManager sharedInstance].user;
+    MDAppDelegate *appDelegate=(MDAppDelegate*)[UIApplication sharedApplication].delegate;
+    [appDelegate showHUDWithLabel:@"正在登录..."];    
     user.username=_txtUser.text;
     user.password=_txtPass.text;
+    user.deviceToken = [YaabUser sharedInstance].deviceToken;
     [MDHTTPAPI login:user success:^(MDUser *user, MDHTTPAPI *api) {
-        
-        LatestViewController *latestVC = [[LatestViewController alloc] init];
+        [[MDUserManager sharedInstance] saveUserSession];
+        [appDelegate hideHUD];
+        MDLatestViewController *latestVC = [[MDLatestViewController alloc] init];
         [self.navigationController pushViewController:latestVC animated:YES];
     } failure:^(NSError *error) {
+        [appDelegate hideHUD];
+        [[error userInfo] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            NSLog(@"%@", [[error userInfo] objectForKey:key]);
+        }];
          [[[iToast makeText:@"登录失败!"] setGravity:iToastGravityCenter] show];
     }];
 
+    // 暂时沿用旧的代码，下次重构应用新的思路
+    // [[MDUserManager sharedInstance] setUser:[[MDUser alloc] init]];
+    // [_delegate loginViewControllerDidLogin:self];
+}
+
+-(void)register
+{
+    [self.navigationController
+     pushViewController:[[MDRegisterViewController alloc] init]
+     animated:YES];
 }
 @end

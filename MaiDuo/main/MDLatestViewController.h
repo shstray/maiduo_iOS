@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface LatestViewController : UIViewController<UITableViewDataSource,
+@interface MDLatestViewController : UIViewController<UITableViewDataSource,
 UITableViewDelegate> {
     NSArray* activities;
 }
+
 @end

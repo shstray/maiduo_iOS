@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+/** MDUser
+ */
+
 @interface MDUser : NSObject
 
+@property (nonatomic, assign) NSInteger id;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
-@property (nonatomic, strong) NSString *access_token;
-@property (nonatomic, strong) NSString *refresh_token;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *deviceToken;
+@property (copy) NSString *accessToken;
+@property (nonatomic, strong) NSString *refreshToken;
 
+-(NSDictionary *)dictionaryValue;
 -(id)initWithUsername:(NSString *)username password:(NSString *)password;
++(MDUser *)userWithDictionary:(NSDictionary *)aDictionary;
++(MDUser *)userWithJSON:(id)JSON;
++(NSArray *)usersWithJSON:(id)JSON;
 @end

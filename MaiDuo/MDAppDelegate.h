@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <YaabUser.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #import <AFNetworking.h>
  
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    UITableViewController*  latestView;
-    UINavigationController* navigation;
-    YaabUser *user;
+@interface MDAppDelegate : UIResponder <UIApplicationDelegate> {
+    YaabUser *_user;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-
+-(void) showHUDWithLabel:(NSString*) text;
+-(void) hideHUD;
 @end
